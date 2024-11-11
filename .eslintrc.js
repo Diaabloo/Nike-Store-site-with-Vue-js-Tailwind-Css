@@ -1,28 +1,28 @@
 module.exports = {
   root: true,
-  env: {
-    node: true
+  env: { browser: true, es2020: true },
+  parser: 'vue-eslint-parser', // Set the parser to vue-eslint-parser
+  parserOptions: {
+    parser: 'babel-eslint', // Use babel-eslint for JavaScript parsing
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
   extends: [
-    'plugin:vue/vue3-essential',
-    '@vue/standard'
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended',
   ],
-  parserOptions: {
-    parser: '@babel/eslint-parser'
+  ignorePatterns: ['dist', '.eslintrc.js'],
+  plugins: ['vue'],
+  env: {
+    "browser": true,
+    "es6": true,
+    "node": true // Add this line to recognize Node.js globals
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'vue/no-unused-vars': 'warn',
+    'vue/require-v-for-key': 'warn',
+    'vue/valid-v-model': 'warn',
+    'vue/no-unused-components': 'warn',
+    "no-undef": "error",
   },
-  overrides: [
-    {
-      files: [
-        '**/__tests__/*.{j,t}s?(x)',
-        '**/tests/unit/**/*.spec.{j,t}s?(x)'
-      ],
-      env: {
-        jest: true
-      }
-    }
-  ]
-}
+};

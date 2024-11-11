@@ -1,19 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "baseUrl": "./",
-    "moduleResolution": "node",
+    "target": "ES2020", // Specify ECMAScript target version
+    "module": "ESNext", // Specify module code generation
+    "baseUrl": "src", // Base directory to resolve non-relative module names
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["*"] // Aliases for paths
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
-  }
+    "checkJs": false // Disable type checking for JavaScript files
+  },
+  "include": [
+    "src/**/*.js", // Include all JavaScript files
+    "src/**/*.vue" // Include all Vue files
+  ],
+  "exclude": [
+    "node_modules" // Exclude node_modules
+  ]
 }
