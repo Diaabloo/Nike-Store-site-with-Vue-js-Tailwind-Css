@@ -6,7 +6,6 @@ import ContactView from '../views/ContactView.vue'
 import Login from '../components/loginSignupForm/LoginSec.vue';
 import Signup from '../components/loginSignupForm/SignUp.vue';
 
-mode: 'hash',
 const routes = [
   //Home route
   {
