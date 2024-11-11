@@ -9,6 +9,7 @@ import SpecialOffer from "./homePage/sections/SpecialOffer.vue"
 import CustomerReviews from "./homePage/sections/CustomerReviews.vue"
 import SubscribeSec from "./homePage/sections/SubscribeSec.vue"
 import TopProducts from "./productPage/TopProducts.vue"
+import ProductDetail from "./productPage/ProductDetail.vue"
 import ContactUs from "./contactPage/ContactUs.vue"
 
 export {
@@ -23,5 +24,6 @@ export {
   ChallengesRoute,
   HightQuality,
   TopProducts,
-  ContactUs
+  ContactUs,
+  ProductDetail
 }

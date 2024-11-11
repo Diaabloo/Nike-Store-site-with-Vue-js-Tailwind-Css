@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ProductView from '../views/ProductView.vue'
+import ProductDetailView from '../views/ProductDetailsView.vue'
 import ContactView from '../views/ContactView.vue'
 import Login from '../components/loginSignupForm/LoginSec.vue';
 import Signup from '../components/loginSignupForm/SignUp.vue';
@@ -25,6 +26,12 @@ const routes = [
     name: 'product',
     component: ProductView
   },
+    //Product Detail route
+    {
+      path: '/products-details/:id',
+      name: 'product-details',
+      component: ProductDetailView
+    },
   //Contact route
   {
     path: '/contact-us',
